@@ -1,0 +1,6 @@
+javac <paketas>.<javaFailas>.java
+Java kompiliavimas:
+javac lt.bt.java.basics.HelloWorld.java
+Java paleidimas:
+java <paketas>.<klases pavadinimas>
+java lt.bt.java.basics.HelloWorld
