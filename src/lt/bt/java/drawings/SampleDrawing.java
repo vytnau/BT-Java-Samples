@@ -1,7 +1,11 @@
 package lt.bt.java.drawings;
 
-import java.io.IOException;
-
+/*
+ * Noredami paleisti programa suvykdykite .bat
+ * faila, kuri rasite scripts kataloge, pavadinimu
+ * start-drawing.bat
+ * Priesingu atveju, piesimas veiks ne taip kaip turetu.
+ */
 public class SampleDrawing {
 
 	public static void main(String... args) throws Exception {
