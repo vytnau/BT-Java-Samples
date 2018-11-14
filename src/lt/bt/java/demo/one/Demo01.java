@@ -13,7 +13,7 @@ public class Demo01 {
 			System.out.println("atsakymas: " + ats);
 		} else {
 			System.out.println("netiketas rezultatas: " + ats);
-		}
+		} 
 	}
 
 }

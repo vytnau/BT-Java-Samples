@@ -11,7 +11,6 @@ public class Demo02 {
 		
 		System.out.println("Labas," + name + "!");
 		reader.close();
-
 	}
 
 }
