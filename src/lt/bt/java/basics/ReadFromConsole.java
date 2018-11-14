@@ -8,7 +8,7 @@ public class ReadFromConsole {
 		System.out.println("Enter your name: ");
 		Scanner reader= new Scanner(System.in);		
 		String name = reader.nextLine();
-		reader.close();
+		reader.close(); 
 		System.out.println("Hello, " + name + "!");
 	}
 
