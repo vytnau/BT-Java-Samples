@@ -1,4 +1,4 @@
-package lt.bt.java.demo.one;
+package lt.bt.java.demo.basics;
 
 import java.util.Scanner;
 

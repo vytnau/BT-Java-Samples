@@ -1,4 +1,4 @@
-package lt.bt.java.demo.two;
+package lt.bt.java.demo.loops;
 
 public class ForLoop {
 
