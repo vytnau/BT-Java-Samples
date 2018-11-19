@@ -1,0 +1,9 @@
+Parašyti skaiciuotuvo programa kuri atliktu šiuos veiksmus:
+1. sudetu
+2. daugintu
+3. dalintu
+4. atimtu.
+5. baigtu darba.
+skaicius. 
+Suskaiciavus rezultata ji atspausdintu ir pasiulytu toliau skaiciuoti iš naujo, arba baigti darba.
+
