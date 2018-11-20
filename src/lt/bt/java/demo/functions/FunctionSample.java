@@ -2,10 +2,11 @@ package lt.bt.java.demo.functions;
 
 public class FunctionSample {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         printHelloWorld();
         printText("First text");
         printText("Second text");
+        printText("Trecias tekstas");
     }
 
     private static void printHelloWorld(){

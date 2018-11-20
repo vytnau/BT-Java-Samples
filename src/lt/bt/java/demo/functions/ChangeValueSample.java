@@ -2,7 +2,7 @@ package lt.bt.java.demo.functions;
 
 public class ChangeValueSample {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         int number = 0;
         printText("Value: " + number);
         calculate(number);
@@ -15,7 +15,7 @@ public class ChangeValueSample {
         printText("Value after change: " + array[0]);
     }
 
-    private static void changeValue(int[] myArray){
+    private static void changeValue(int[] myArray){    	
         for(int i = 0; i < myArray.length; i++){
             myArray[i] += 2;
         }
