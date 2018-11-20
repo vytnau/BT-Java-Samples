@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class ArrayHomeWork {
 
     public static void main(String[] args) throws FileNotFoundException {
-        //1 task: Suskaičiuoti masyvo elemento vidurki
+        //1 task: SuskaiÄ�iuoti masyvo elemento vidurki
         String filePath = "C:\\sources\\mokymai\\BalticTalents-Samples\\res\\txt\\task\\ArrayTaskData.txt";
         File file = new File(filePath);
         Scanner scanner = new Scanner(file);
