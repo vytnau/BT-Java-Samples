@@ -1,0 +1,15 @@
+
+-------------
+1. Skaiciu dalyba
+2. Uždaviniu sprendimo varžybos.
+3. Automobiliu lenktynes
+4. Temperatura.
+5. LEGO robotas.
+-------------
+
+Kam sunkiau sekasi:
+1. Tiesiniai algoritmai
+2. Šakotieji algoritmai
+3. Cikliniai algoritmai. Žinomo kartojimu skaiciaus ciklas
+4. Cikliniai algoritmai. NeŽinomo kartojimu skaiciaus ciklas
+5. Skaitymas iš failo. Rašymas i faila
