@@ -3,6 +3,8 @@ package lt.bt.java.demo.object.samples;
 public class TestHuman {
 
 	public static void main(String[] args) {
+		
+		int[] array = {4, 5,7,4};
 		Human human = new Human();
 		System.out.println(human.getName());
 		human.setName("Vytautas");
@@ -14,7 +16,8 @@ public class TestHuman {
 		System.out.println(human2.getLastName());
 		System.out.println("-------------");
 		
-		Human human3 = new Human("Jonas", "Jonaitis");
+		Human human3 = new Human("Jonas", "Jonaitis", array);
+		human3 = new Human("Jonas", "Jonaitis", new int[]{1, 2,45,5});
 		System.out.println(human3.getName());
 		System.out.println(human3.getLastName());
 		System.out.println("-------------");
