@@ -5,10 +5,12 @@ public class Human {
 	private String lastName = "";
 	int age = 16;
 	public String address = "Adresas";
+	private int array[] = null;
 	
 	public Human(){
 		name = "Nera vardo";
 		lastName = "nera pavardes";
+		array = new int[0];
 	}
 	
 	public Human(String name){
@@ -16,7 +18,8 @@ public class Human {
 		this.name = name;
 	}
 	
-	public Human(String name, String lastName){
+	public Human(String name, String lastName, int[] newArray){
+		this.array = newArray;
 		this.name = name;
 		this.lastName = lastName;
 	}
