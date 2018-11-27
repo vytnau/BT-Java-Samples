@@ -52,4 +52,13 @@ public class Student {
 	public void setMarks(int[] marks) {
 		this.marks = marks;
 	}
+	
+	public void addMark(int mark){
+		int[] newArray = new int[marks.length + 1];
+		for(int i = 0; i < marks.length; i++){
+			newArray[i] = marks[i];
+		}
+		newArray[marks.length] = mark;
+		marks = newArray;
+	}
 }

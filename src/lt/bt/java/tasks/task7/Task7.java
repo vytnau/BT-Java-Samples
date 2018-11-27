@@ -10,6 +10,8 @@ public class Task7 {
 		Student stud2 = task.createStudent("Linas", "Pocius", "11", new int[]{6, 4, 7, 7, 10},  new boolean[]{false, true, false, false, true});
 		
 		task.printStudentRezult(stud1);
+		stud1.addMark(10);
+		task.printStudentRezult(stud1);
 		task.printStudentRezult(stud2);
 	}
 	
