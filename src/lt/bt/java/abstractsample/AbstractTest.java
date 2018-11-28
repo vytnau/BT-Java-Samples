@@ -3,8 +3,9 @@ package lt.bt.java.abstractsample;
 import lt.bt.java.abstractsample.farms.CowFarm;
 import lt.bt.java.abstractsample.farms.Farm;
 import lt.bt.java.abstractsample.farms.PigFarm;
+import lt.bt.java.abstractsample.farms.data.Cow;
 import lt.bt.java.abstractsample.farms.data.Food;
-import lt.bt.java.tasks.task8.data.Cow;
+
 
 public class AbstractTest {
 
@@ -19,10 +20,17 @@ public class AbstractTest {
 		Farm pigFarm = new PigFarm();
 		
 		cowFarm.addAnimal(new Cow());
-		cowFarm.addFood(new Food());
+		cowFarm.addAnimal(new Cow());
+		
+		cowFarm.setFood(new Food("Zole", 100));
+		//cowFarm.addFood(new Food("Sienas", 200));
+		
+		System.out.println("Maisto uzteks: " + cowFarm.calculateFood() + " dienoms");
+		cowFarm.feedAnimals();
+		System.out.println("Maisto uzteks: " + cowFarm.calculateFood() + " dienoms");
+		
 		pigFarm.addAnimal(new Cow());
-		pigFarm.addFood(new Food());
-
+		//pigFarm.addFood(new Food());
 	}
 
 }

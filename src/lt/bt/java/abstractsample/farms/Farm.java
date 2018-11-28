@@ -1,15 +1,28 @@
 package lt.bt.java.abstractsample.farms;
 
 import lt.bt.java.abstractsample.farms.data.Food;
-import lt.bt.java.tasks.task8.data.Animal;
+import lt.bt.java.abstractsample.farms.data.Animal;
 
 public abstract class Farm {
 	protected Animal[] animals;
-	protected Food[] foods;
+	protected Food food;
 	protected int workersCount;
 	protected int animalsCount = 0;
 
-	protected abstract void feedAnimals();
+	public abstract void feedAnimals();
+	
+	public double calculateFood(){
+		double result = 0;
+		int poreikis = 0;
+		for(int i = 0; i < animals.length; i++){
+			Animal animal = animals[i];
+			Food animalFood = animal.getEdrumas();
+			poreikis += animalFood.getFoodCount(); 
+		}
+		
+		result = food.getFoodCount() / poreikis;
+		return result;
+	}
 
 	public void addAnimal(Animal animal) {
 		if (animals == null) {
@@ -26,19 +39,23 @@ public abstract class Farm {
 			animals = tmp;
 		}
 	}
-
-	public void addFood(Food food) {
-		if (foods == null) {
-			foods = new Food[1];
-			foods[0] = food;			
-		} else {
-			int foodsCount = foods.length;
-			Food[] tmp = new Food[foodsCount + 1];
-			for (int i = 0; i < foodsCount; i++) {
-				tmp[i] = foods[i];
-			}
-			tmp[foodsCount] = food;
-			foods = tmp;
-		}
+	
+	public void setFood(Food food){
+		this.food = food;
 	}
+
+//	public void addFood(Food food) {
+//		if (foods == null) {
+//			foods = new Food[1];
+//			foods[0] = food;			
+//		} else {
+//			int foodsCount = foods.length;
+//			Food[] tmp = new Food[foodsCount + 1];
+//			for (int i = 0; i < foodsCount; i++) {
+//				tmp[i] = foods[i];
+//			}
+//			tmp[foodsCount] = food;
+//			foods = tmp;
+//		}
+//	}
 }

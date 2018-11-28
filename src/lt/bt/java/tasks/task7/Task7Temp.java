@@ -1,18 +1,28 @@
 package lt.bt.java.tasks.task7;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 import lt.bt.java.tasks.task7.data.Temp;
 
 public class Task7Temp {
+	
+	private String fileName = "C:\\sources\\mokymai\\BalticTalents-Samples\\res\\txt\\out\\RezTemperatura.txt";
+	private FileWriter fw = null;
+	private BufferedWriter bw = null;
+	
+	public Task7Temp() throws IOException{
+		fw = new FileWriter(fileName);
+		bw = new BufferedWriter(fw);
+	}
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		String filePath = "C:\\sources\\mokymai\\BalticTalents-Samples\\res\\txt\\task\\Temperatura.txt";
 		Task7Temp task = new Task7Temp();
 		Temp[] temps = task.readData(filePath);
@@ -20,12 +30,13 @@ public class Task7Temp {
 		System.out.println();
 		System.out.println("Uzduoties vykdymas:");
 		task.calculateAvg(temps);
+		task.close();
 	}
 	
 	//////////////////////////////////
 	
-	public void calculateAvg(Temp[] temps){
-		DecimalFormat df2 = new DecimalFormat(".##");
+	public void calculateAvg(Temp[] temps) throws IOException{
+		DecimalFormat df2 = new DecimalFormat(".###");
 		double[] monthsTempAvg = new double[temps.length];
 		for (int i = 0; i < temps.length; i++) {
 			Temp temp = temps[i];
@@ -36,7 +47,9 @@ public class Task7Temp {
 			}
 			avg = avg / measures.length;
 			
+			//System.out.println(temp.getMonth() + " " + avg);
 			System.out.println(temp.getMonth() + " " + df2.format(avg));
+			saveToFile(temp.getMonth() + " " + df2.format(avg));
 			monthsTempAvg[i] = avg;
 		}
 		double avg = 0;
@@ -46,6 +59,17 @@ public class Task7Temp {
 		
 		avg = avg / monthsTempAvg.length;
 		System.out.println("Bendras matavimų vidurkis: " + df2.format(avg));
+		saveToFile("Bendras matavimų vidurkis: " + df2.format(avg));
+	}
+	
+	private void saveToFile(String text) throws IOException{					
+		bw.write(text);
+		bw.write("\r\n");
+	}
+	
+	public void close() throws IOException{
+		bw.close();
+		fw.close();
 	}
 	
 	public void print(Temp[] temps){		

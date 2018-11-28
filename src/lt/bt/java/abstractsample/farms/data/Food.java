@@ -4,6 +4,15 @@ public class Food {
 	private String foodName;
 	private int foodCount;
 	
+	public Food(){
+		
+	}
+	
+	public Food(String maistoPavadinimas, int kiekis) {
+		this.foodName = maistoPavadinimas;
+		this.foodCount = kiekis;
+	}
+	
 	public String getFoodName() {
 		return foodName;
 	}
