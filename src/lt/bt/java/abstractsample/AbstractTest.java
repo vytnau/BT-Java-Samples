@@ -19,7 +19,8 @@ public class AbstractTest {
 		Farm cowFarm = new CowFarm();
 		Farm pigFarm = new PigFarm();
 		
-		cowFarm.addAnimal(new Cow());
+		Cow cow = new Cow(); // == cowFarm.addAnimal(new Cow());
+		cowFarm.addAnimal(cow);
 		cowFarm.addAnimal(new Cow());
 		
 		cowFarm.setFood(new Food("Zole", 100));
