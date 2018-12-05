@@ -132,7 +132,7 @@ public class Main {
 
 	private static void paieska(Padanga[] padangos, Padanga ieskomaPadanga) {
 		int kiekis = 0;
-		double bendraKaina = 0;
+		double bendraKaina = 0;		
 		for (int i = 0; i < padangos.length; i++) {
 			Padanga sandelioPadanga = padangos[i];
 			if (arAtitinka(ieskomaPadanga, sandelioPadanga)) {
