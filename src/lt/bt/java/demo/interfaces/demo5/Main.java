@@ -13,5 +13,6 @@ public class Main {
         System.out.println("New salary = " + employee.getSalary());
 
         System.out.println("Salary total = " + Salary.getTotal(100, 25));
+        
     }
 }
