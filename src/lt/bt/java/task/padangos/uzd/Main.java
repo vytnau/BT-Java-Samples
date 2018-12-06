@@ -6,66 +6,27 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-		Padanga ratas = new Padanga();
-		Padanga[] padangos = read(ratas);
-		System.out.println(ratas);
+//		Padanga ratas = new Padanga();
+//		Padanga[] padangos = read(ratas);
+//		System.out.println(ratas);
 		System.out.println("naudojant tarpine klase:");
 		RatasWrap ratasWrap = readUsingWrap();
 		System.out.println(ratasWrap.getIeskomasRatas());
-		paieska(padangos, ratas);
+		paieska(ratasWrap.getTurimiRatai(), ratasWrap.getIeskomasRatas());
 
 		// paieska tarp padangu
 	}
 
-	private static String read() throws IOException {
+	private static String getFileName() throws IOException {
 		String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\padanga.txt";
 		return filePath;
-	}
-
-	private static int plot() throws IOException {
-		File file = new File(read());
-		Scanner scanner = new Scanner(file);
-		int plotis = scanner.nextInt();
-		// System.out.println("plotis - " + plotis);
-		return plotis;
-	}
-
-	private static int auks() throws IOException {
-		File file = new File(read());
-		Scanner scanner = new Scanner(file);
-		scanner.nextInt();
-		int aukstis = scanner.nextInt();
-		// System.out.println("aukstis - " + aukstis);
-		return aukstis;
-	}
-
-	private static String index() throws IOException {
-		File file = new File(read());
-		Scanner scanner = new Scanner(file);
-		scanner.nextInt();
-		scanner.nextInt();
-		String greit = scanner.nextLine();
-		greit = greit.trim();
-		// System.out.println("greitis - " + greit);
-		return greit;
-	}
-
-	private static int arrayNumber() throws IOException {
-		File file = new File(read());
-		Scanner scanner = new Scanner(file);
-		scanner.nextInt();
-		scanner.nextInt();
-		scanner.nextLine();
-		int arrayNum = scanner.nextInt(); // masyvo ilgis
-		// System.out.println("ilgis - " + arrayNum);
-		return arrayNum;
-	}
+	}	
 
 	private static Padanga[] read(Padanga ratas) throws IOException {
 
 		double bendraKaina = 0;
 		int kiekis = 0;
-		File file = new File(read());
+		File file = new File(getFileName());
 		Scanner scanner = new Scanner(file);
 
 		int plotis = scanner.nextInt();
@@ -100,7 +61,7 @@ public class Main {
 	}
 
 	private static RatasWrap readUsingWrap() throws IOException {
-		File file = new File(read());
+		File file = new File(getFileName());
 		Scanner scanner = new Scanner(file);
 
 		int plotis = scanner.nextInt();
