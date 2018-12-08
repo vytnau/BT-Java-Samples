@@ -17,8 +17,7 @@ public class BirthdayService {
 		String filePath = "res\\txt\\task\\Birthday.txt";
 		File file = new File(filePath);
 		Scanner scanner = new Scanner(file);
-
-		List<Person> info = new LinkedList<>();
+		
 		while(scanner.hasNext()){
 			Person personInfo = new Person();
 			personInfo.setName(scanner.next());
