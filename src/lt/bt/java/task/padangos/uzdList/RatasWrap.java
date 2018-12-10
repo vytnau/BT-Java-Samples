@@ -1,4 +1,4 @@
-package lt.bt.java.task.padangos.uzd;
+package lt.bt.java.task.padangos.uzdList;
 
 import java.util.List;
 
