@@ -34,31 +34,39 @@ public class BirthdayService {
 	}
 
 	public void calculateDate(List<Person> persons) throws ParseException {
-		Calendar cal1 = new GregorianCalendar();
-		Calendar cal2 = new GregorianCalendar();
+		Calendar siandieninisKalendorius = new GregorianCalendar();
+		Calendar gimtadininkoKalendorius = new GregorianCalendar();		
+		SimpleDateFormat datosFormateris = new SimpleDateFormat("yyyyMMdd");
+		Calendar dabartineData = Calendar.getInstance();
+		//sukuriam Date objekta, naudodami date formateri. Jam paduodami string tipo data suformatuota pagal formata yyyyMMdd
+		Date laikinasDateObj = datosFormateris.parse(dabartineData.get(Calendar.YEAR) + "" + formatDate(dabartineData));
+		siandieninisKalendorius.setTime(laikinasDateObj);
 
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-		Calendar nowDate = Calendar.getInstance();
-		Date date = sdf.parse(nowDate.get(Calendar.YEAR) + "" + formatDate(nowDate));
-		cal1.setTime(date);
-
+		//suskaiciuojam zmoniu dienas. 
 		for (Person person : persons) {
-			int year = nowDate.get(Calendar.YEAR);
-			if(nowDate.get(Calendar.MONTH) > person.getBirthMonth()){				
+			//pasiimam dabartinius metus
+			int year = dabartineData.get(Calendar.YEAR);
+			//tikrinam ar dabartines menesis daugiau uz zmogaus gimtadienio menesi
+			if(dabartineData.get(Calendar.MONTH) > person.getBirthMonth()){
+				//jeigu daugiau, gimtadienis kitais metais
 				year++;
 			}
 			
-			date = sdf.parse(year + "" + getBirthdayMonthAndDay(person));
-			cal2.setTime(date);
-			int days = daysBetween(cal1.getTime(), cal2.getTime());
+			//sukuriam person gimtadienio date objekta
+			laikinasDateObj = datosFormateris.parse(year + "" + getBirthdayMonthAndDay(person));
+			gimtadininkoKalendorius.setTime(laikinasDateObj);
+			//suskaiciuojam kiek dienu liko iki gimtadienio
+			int days = daysBetween(siandieninisKalendorius.getTime(), gimtadininkoKalendorius.getTime());
 
+			//spausdinam rezultatus
 			System.out.print(person.getName() + " " + person.getLastName() + " iki "
 					+ (year  - person.getBirthYear()) + " gimtadienio" + " liko dienų " + days);
 			System.out.println();
 		}
 	}
 
-	private int daysBetween(Date d1, Date d2) {				
+	private int daysBetween(Date d1, Date d2) {
+		//datas konvertuojam i milisekundes, jas atimam ir konvertuojam i dienas
 		return (int) ((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
 	}
 
