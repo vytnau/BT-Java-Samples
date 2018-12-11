@@ -1,7 +1,9 @@
 package lt.bt.java.basics;
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class ListExample {
 
@@ -47,6 +49,9 @@ public class ListExample {
 		for (Integer sk : myList) {
 			System.out.println(sk);
 		}
+		
+//		Stack<String> sampleStack = new Stack<>();
+//		sampleStack.
 	}
 
 }

@@ -1,17 +1,30 @@
 package lt.bt.java.demo.genericAndEnum.demo2;
 
-import static  lt.bt.java.demo.genericAndEnum.demo2.Planet.EARTH;
+import lt.bt.java.demo.genericAndEnum.demo2.Planet;
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        double earthWeight = 100;
+		double earthWeight = 100;
 
-        double mass = earthWeight/EARTH.surfaceGravity();
+		double mass = earthWeight / Planet.EARTH.surfaceGravity();
 
-        for (Planet p : Planet.values()) {
-            System.out.println("Your weight on " + p + " is " + p.surfaceWeight(mass) + "kg");
-        }
-    }
+		for (Planet p : Planet.values()) {
+			if (p == Planet.EARTH) {
+				System.out.println("Your weight on " + p + " is " + p.surfaceWeight(mass) + "kg");
+			}
+		}
+		
+		Planet p = Planet.EARTH;
+		switch (p) {
+		case EARTH:
+			
+			break;
+
+		default:
+			
+			break;
+		}
+	}
 }

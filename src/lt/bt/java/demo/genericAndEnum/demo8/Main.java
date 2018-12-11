@@ -7,8 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        aboutExtends();
-        aboutSuper();
+    	String text = "a,v,n,t,g, sss, ttt, a";
+    	String[] array = text.split(",");
+    	for(int i = 0; i < array.length; i++){
+    		System.out.println(array[i]);
+    	}
+//        for(String t : array){
+//        	System.out.println(t);
+//        }
+//        aboutExtends();
+//        aboutSuper();
 
     }
 
@@ -51,7 +59,7 @@ public class Main {
         // we cannot know which supertype it is, so it's Object
         for (Object object : basket) {
             System.out.println(object);
-        }
+        }               
     }
 
 }

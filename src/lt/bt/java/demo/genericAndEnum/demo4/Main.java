@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //ListIntSum<String> list = new ListIntSum<>()
+        //ListIntSum<String> list2 = new ListIntSum<>()
 
         ListIntSum<Double> list = new ListIntSum<>();
         list.add(1.0);
