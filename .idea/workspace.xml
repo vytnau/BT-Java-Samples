@@ -5,26 +5,9 @@
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tasks/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/tasks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalticTalents-Samples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BalticTalents-Samples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Charakteristika.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Child.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Dirbtuves.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/GerasBlogas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Interf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/KaledosMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/ReadFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Sandelis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/Vaikai.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/students/samples/kaledos/VaikuZaislai.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/christmas/KaledosSkaiciavimai.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/Duomenys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/Duomenys.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/MainSviesuoliuMiestas.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/MainSviesuoliuMiestas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/Skaiciavimai.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/Skaiciavimai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/data/Gyventojas.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/data/Gyventojas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lt/bt/java/tasks/sviesuoliuMiestas/data/Prenumeratos.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/data/Prenumeratos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/target/classes/lt/bt/tasks/sviesuoliuMiestas/Duomenys.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/tasksamples/target/" />
@@ -40,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/Skaiciavimai.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#290#291#0" expanded="true" />
@@ -75,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/MainSviesuoliuMiestas.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,7 +243,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555949515567" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555949827604" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -335,9 +318,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25506073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -346,7 +328,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -494,7 +476,7 @@
     <entry file="file://$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/MainSviesuoliuMiestas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -504,7 +486,7 @@
     <entry file="file://$PROJECT_DIR$/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/Skaiciavimai.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#290#291#0" expanded="true" />
