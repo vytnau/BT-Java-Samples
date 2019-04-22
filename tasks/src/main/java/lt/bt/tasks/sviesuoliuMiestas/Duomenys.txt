@@ -1,0 +1,7 @@
+5 4
+2.00 3.00 2.00 2.00
+Tomas          2 0 2 0
+Romas          0 1 1 0
+Rimas          2 2 1 3
+Simas          0 1 0 2
+Tadas          1 1 1 0

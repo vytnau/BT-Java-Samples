@@ -1,4 +1,4 @@
-package lt.bt.java.tasks.sviesuoliuMiestas.data;
+package lt.bt.tasks.sviesuoliuMiestas.data;
 
 import java.util.List;
 

@@ -1,24 +1,31 @@
-package lt.bt.java.tasks.sviesuoliuMiestas;
+package lt.bt.tasks.sviesuoliuMiestas;
 
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Gyventojas;
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Prenumeratos;
+import lt.bt.tasks.sviesuoliuMiestas.data.Gyventojas;
+import lt.bt.tasks.sviesuoliuMiestas.data.Prenumeratos;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Skaiciavimai {
+    private DecimalFormat df;
+    public Skaiciavimai(){
+        df = new DecimalFormat("0.00");
+    }
 
-    public void gyventojuPrenumeratuSumos(List<Gyventojas> gyventojai, Prenumeratos prenumeratos){
+    public void spausdintiGyventojuPrenumeratuSumas(List<Gyventojas> gyventojai, Prenumeratos prenumeratos){
         for(Gyventojas gyventojas : gyventojai){
+            StringBuilder sb = new StringBuilder();
             double suma = prenumeratosSuma(gyventojas, prenumeratos);
-            Utils.rasytiRezultatus(gyventojas.getVardas() + suma, MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
-            System.out.println(gyventojas.getVardas() + suma);
+            sb.append(gyventojas.getVardas()).append(" ").append(df.format(suma));
+            Utils.rasytiRezultatus(sb.toString(), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
+            System.out.println(sb.toString());
         }
     }
 
     private double prenumeratosSuma(Gyventojas gyventojas, Prenumeratos pastinkPrenumeratos){
-        double suma = 0;
-        for(int i = 0; i < gyventojas.getPrenumerata().size(); i++){
-            suma += gyventojas.getPrenumerata().get(i) * pastinkPrenumeratos.getLeidiniuKaina().get(i);
+        double suma = 0d;
+        for(int i = 0; i < gyventojas.getPrenumeratos().size(); i++){
+            suma += gyventojas.getPrenumeratos().get(i) * pastinkPrenumeratos.getLeidiniuKaina().get(i);
         }
         return suma;
     }
@@ -28,8 +35,10 @@ public class Skaiciavimai {
         for(Gyventojas gyventojas : gyventojai){
             suma += prenumeratosSuma(gyventojas, prenumeratos);
         }
-        Utils.rasytiRezultatus(String.valueOf(suma), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
-        System.out.println(suma);
+        StringBuilder sb = new StringBuilder();
+        sb.append(df.format(suma));
+        Utils.rasytiRezultatus(sb.toString(), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
+        System.out.println(sb.toString());
     }
 
     public void daugiausiaiLeidiniuUzsiprenumeravo(List<Gyventojas> gyventojai){
@@ -38,7 +47,7 @@ public class Skaiciavimai {
         boolean first = true;
         for(Gyventojas gyventojas : gyventojai){
             int tmp = 0;
-            for(int prenumerata : gyventojas.getPrenumerata()){
+            for(int prenumerata : gyventojas.getPrenumeratos()){
                 tmp += prenumerata;
             }
             if(first){
@@ -52,8 +61,10 @@ public class Skaiciavimai {
                 }
             }
         }
-        Utils.rasytiRezultatus(maxGyv.getVardas() + " " + max, MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
-        System.out.println(maxGyv.getVardas() + " " + max);
+        StringBuilder sb = new StringBuilder();
+        sb.append(maxGyv.getVardas()).append(" ").append(df.format(max));
+        Utils.rasytiRezultatus(sb.toString(), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
+        System.out.println(sb.toString());
     }
 
     public void prenumerataUzMaziausiaSuma(List<Gyventojas> gyventojai, Prenumeratos prenumeratos){
@@ -73,8 +84,10 @@ public class Skaiciavimai {
                 }
             }
         }
-        Utils.rasytiRezultatus(minGyv.getVardas() + " " + min, MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
-        System.out.println(minGyv.getVardas() + " " + min);
+        StringBuilder sb = new StringBuilder();
+        sb.append(minGyv.getVardas()).append(" ").append(df.format(min));
+        Utils.rasytiRezultatus(sb.toString(), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
+        System.out.println(sb.toString());
     }
 
 }

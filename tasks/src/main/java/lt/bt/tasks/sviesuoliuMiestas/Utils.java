@@ -1,7 +1,7 @@
-package lt.bt.java.tasks.sviesuoliuMiestas;
+package lt.bt.tasks.sviesuoliuMiestas;
 
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Gyventojas;
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Prenumeratos;
+import lt.bt.tasks.sviesuoliuMiestas.data.Gyventojas;
+import lt.bt.tasks.sviesuoliuMiestas.data.Prenumeratos;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Utils {
     public static Map<String, Object> nuskaitytiDuomenis(String failoVardas) throws FileNotFoundException {
-        String failoKelias = new File("").getAbsolutePath() + "/src/lt/bt/java/tasks/sviesuoliuMiestas/" + failoVardas;
+        String failoKelias = new File("").getAbsolutePath() + "/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/" + failoVardas;
         Map<String, Object> result = new HashMap<>();
         File file = new File(failoKelias);
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -66,7 +66,7 @@ public class Utils {
     }
 
     public static void rasytiRezultatus(String content, String fileName, boolean append){
-        String resultFile = new File("").getAbsolutePath() + "/src/lt/bt/java/tasks/sviesuoliuMiestas/" + fileName;
+        String resultFile = new File("").getAbsolutePath() + "/tasks/src/main/java/lt/bt/tasks/sviesuoliuMiestas/" + fileName;
         FileWriter fw;
         try {
             fw = new FileWriter(resultFile, append);

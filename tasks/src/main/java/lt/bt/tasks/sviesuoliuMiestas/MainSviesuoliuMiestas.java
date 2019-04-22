@@ -1,7 +1,7 @@
-package lt.bt.java.tasks.sviesuoliuMiestas;
+package lt.bt.tasks.sviesuoliuMiestas;
 
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Gyventojas;
-import lt.bt.java.tasks.sviesuoliuMiestas.data.Prenumeratos;
+import lt.bt.tasks.sviesuoliuMiestas.data.Gyventojas;
+import lt.bt.tasks.sviesuoliuMiestas.data.Prenumeratos;
 
 import java.io.FileNotFoundException;
 import java.util.List;
@@ -19,7 +19,7 @@ public class MainSviesuoliuMiestas {
         Map<String, Object> duomenys = Utils.nuskaitytiDuomenis(DUOMENU_FAILAS);
         List<Gyventojas> gyventojai = (List<Gyventojas>) duomenys.get(GYVENTOJAI);
         Prenumeratos prenumeratos = (Prenumeratos)duomenys.get(PRENUMERATOS);
-        skaiciavimai.gyventojuPrenumeratuSumos(gyventojai, prenumeratos);
+        skaiciavimai.spausdintiGyventojuPrenumeratuSumas(gyventojai, prenumeratos);
         skaiciavimai.leidiniamsIsVisoIsleista(gyventojai, prenumeratos);
         skaiciavimai.daugiausiaiLeidiniuUzsiprenumeravo(gyventojai);
         skaiciavimai.prenumerataUzMaziausiaSuma(gyventojai, prenumeratos);
