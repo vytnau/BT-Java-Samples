@@ -18,7 +18,7 @@ public class Skaiciavimai {
             double suma = prenumeratosSuma(gyventojas, prenumeratos);
             sb.append(gyventojas.getVardas()).append(" ").append(df.format(suma));
             Utils.rasytiRezultatus(sb.toString(), MainSviesuoliuMiestas.REZULTATU_FAILAS, true);
-            System.out.println(sb.toString());
+            System.out.println(gyventojas.getVardas() + " " + df.format(suma));
         }
     }
 

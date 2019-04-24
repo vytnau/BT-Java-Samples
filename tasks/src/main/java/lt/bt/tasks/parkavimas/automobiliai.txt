@@ -1,0 +1,2 @@
+Marke, valst nr, zona,  Parkavimas nuo, parkavimas iki
+VW Golf         HGU475 M 2019-04-23 8:00    2019-04-23 11:00
